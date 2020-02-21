@@ -1,4 +1,6 @@
-<p>Book was successfully created.</p>
+<% if flash[:notice] %>
+ <%= flash[:notice] %>
+ <% end %>
 Title:<%= @book.title %>
 Body:<%= @book.body %>
 <%= link_to "Edit", edit_book_path(@book) %>
